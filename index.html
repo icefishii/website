@@ -43,7 +43,12 @@
     .section-title{display:flex; align-items:center; justify-content:space-between; gap:10px; margin:26px 0 8px;}
     .section-title h2{margin:0; font-size:clamp(18px, 2.6vw, 22px)}
     .card{padding:18px; border-radius:var(--radius-sm); background:var(--card); border:1px solid color-mix(in oklab, var(--fg) 10%, transparent); box-shadow:var(--shadow)}
-    .projects-list{grid-column:1/-1; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr))}
+    .projects-list{grid-column:1/-1; grid-template-columns: repeat(2, 1fr)}
+    @media (max-width: 768px) {
+      .projects-list {
+        grid-template-columns: 1fr;
+      }
+    }
     .repo{display:flex; flex-direction:column; gap:10px}
     .repo h3{margin:0; font-size:18px}
     .repo p{margin:0; color:var(--muted); min-height:42px}
