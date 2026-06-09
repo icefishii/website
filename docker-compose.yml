@@ -1,0 +1,7 @@
+services:
+  website:
+    image: ghcr.io/icefishii/website:latest
+    container_name: website
+    ports:
+      - "8080:80"
+    restart: unless-stopped
